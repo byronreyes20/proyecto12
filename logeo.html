@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Logeo</title>
+	<link rel="stylesheet" href="logeo.css" media="all" >
+	<link rel="stylesheet" href="index.css" media="all" >
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link href='http://fonts.googleapis.com/css?family=Oleo+Script:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<header>
+	<h1>CESXELACAR</h1>
+	<h1>CONCECIONARIA</h1>
+	<div class="movimiento" align="center">
+	<marquee width="150px">EL MEJOR LUGAR PARA COMPRAR TUS VEHICULOS "TOYOTA"</marquee>
+</header>
+
+<div id="menu">
+	  	 <ul class="nav" >
+	      <li><a href="logeo.html" >Logeo</a></li>
+	      <li><a href="autos.html" >Autos</a></li>
+	      <li><a href="ubicacion.html" >Ubicacion</a></li>
+	      <li><a href="contactanos.html" >Contactanos</a></li>
+	   </ul>
+	</div>
+
+<div id="mq">
+		<marquee width=900px behavior=alternate>
+				<a > <img src="images/carros/tacoma.jpg"width="350px" height="200px"></a>
+				<a > <img src="images/carros/yaris.jpg" width="350px" height="200px"></a>
+		</marquee>
+		<marquee width=900px behavior=alternate>
+				<a> <img src="images/carros/sw4.jpg"width="350px" height="200px"></a>
+				<a> <img src="images/carros/camioneta.jpg" width="350px" height="200px"></a>
+		</marquee>
+</div>
+				<form>
+					<h1>Logeo</h1>
+					<label>Nombre</label>
+					<input type="text" max-length="40" placeholder="Ingrese su nombre"/>
+					<label>Contraseña</label>
+					<input type="password" max-length="40" placeholder="Ingrese su Contraseña"/> 
+					<a href="autos.html" > <button type="subimit">Ingresar</button> </a>
+				</form>
+</body>
+
+<?php
+
+	$vNombre = $_POST["txtNombre"];
+	$vpassword = $_POST['txtpassword'];
+	
+	
+	$vingresar=$_POST[''];
+
+	$conexion = mysql_connect('localhost','root');
+
+	if (mysql_select_db("consecionario",$conexion))
+		echo "conexio exitosa";
+	else
+		echo "Conexion erronea";
+	
+
+	$query = "INSERT INTO usuarios (nombre,Contraseña) VALUES ('$vNombre','$vpassword)";
+
+	echo $query;
+
+	if (mysql_query($query))
+		echo "Insercion correcta";
+	else
+		echo "Error al insertar";
+
+
+?>
+
+
+
+</html>

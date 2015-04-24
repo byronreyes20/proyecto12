@@ -1,0 +1,23 @@
+body { background-image:url("images/bo_play_pattern.png"); font: 14px Georgia, serif; }
+
+#menu { margin:20px 30px 30px 150px; }
+#menu ul { list-style:none; }
+#menu ul li { display:inline; float:left; margin-bottom:20px; }
+#menu ul li a { padding:20px; background: rgba(255,138,30,0.3); text-decoration: none; font: bold 14px Helvetica, Sans-Serif; letter-spacing: -1px; color: #502e19;
+    text-shadow: #eee 0px 0px 2px; }
+#menu ul li:first-child a { border-radius: 0px 0px 0px 58px;
+-moz-border-radius: 0px 0px 0px 58px;
+-webkit-border-radius: 0px 0px 0px 58px;
+border: 0px solid #000000; }
+#menu ul li:last-child a { border-radius: 0px 0px 58px 0px;
+-moz-border-radius: 0px 0px 58px 0px;
+-webkit-border-radius: 0px 0px 58px 0px;
+border: 0px solid #000000; }
+#menu ul li a:hover { -moz-box-shadow: 0 -5px 10px #777; -webkit-box-shadow: 0 -5px 10px #777;
+	background: -webkit-gradient(
+		linear, right bottom, left top, color-stop(0, rgb(237,227,112)), color-stop(0.72, rgb(255,173,10))) !important;
+	background: -moz-linear-gradient(
+		right bottom, rgb(237,227,112) 0%, rgb(255,173,10) 72%) !important;
+	background-color:rgb(255,173,10) !important;
+	-moz-opacity:.90; filter:alpha(opacity=90); opacity:.90; }
+	#payasita {margen:334px 344px 34px 344px;}
